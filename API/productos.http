@@ -1,0 +1,28 @@
+@api = http://localhost:5000
+
+
+###
+get http://localhost:5000/productos/
+###
+POST http://localhost:5000/productos
+Content-Type: application/json
+
+{
+    "sku": "00003",
+    "nombre": "Nutella",
+    "cantidad": "25",
+    "precio": "7.99",
+    "descripcion":"Con cocoa",
+    "imagen": "https://5.imimg.com/data5/XO/MR/DM/SELLER-12316261/nutella-500x500.jpg"
+}
+
+###
+DELETE http://localhost:5000/productos/5faef08e44f312336855ea7a
+
+###
+PUT http://localhost:5000/productos/5faef4654f54d91ad4249409
+Content-Type: application/json
+
+{   
+    "imagen":"https://images-na.ssl-images-amazon.com/images/I/71aemY3xw6L._SL1500_.jpg"    
+}
